@@ -5,11 +5,8 @@ homepage = "https://github.com/u9h/newsletter"
 min_version = "0.3.4"
 
 [extra]
-feather_header_image = "/theme_images/default.gif"
-feather_disqus_code = ""
-feather_donate_link = ""
-feather_analytics = ""
+#u9h_extra = ""
 
 [author]
-name = "doomy"
-homepage = "https://alexanderlozada.com"
+name = "U9H"
+homepage = "https://u9h.design"
