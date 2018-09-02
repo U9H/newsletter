@@ -1,52 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>U9H</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600" rel="stylesheet">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-{% block alt_body %}
-<body>
-{% endblock alt_body %}
-    {% block alt_nav %}<nav>{% endblock alt_nav %}
-        <div class="container padded-h">
-            <a href="/">
-                <img class="col w2" src="/media/logo.png" />
+{% extends "master/index.html" %} {% block page %}
+<nav>
+    <div class="container padded-h">
+        <a href="/">
+            <img class="col w2" src="{{config.extra.newsletter_logo}}" />
+        </a>
+        <div class="col w10 v-middle align-right links">
+            {% for item in config.extra.newsletter_menu %}
+            <a href="{{ item.url }}">
+                {{ item.name }}
             </a>
-            <div class="col w10 v-middle align-right links">
-                {% for item in config.extra.u9h_menu %}
-                    <a href="{{ item.url }}">
-                        {{ item.name }}
-                    </a>
-                {% endfor %}
-            </div>
-        </div>
-    </nav>
-    {% block content %}
-    <div class="hero center-children-vertically">
-        <div class="container padded inverse">
-            <div class="col w6 large">
-                <h1>Designing the digital future, one step at a time.</h1>
-                <h3>We are a fully-digital design studio committed to  transparency and creativity.</h3>
-            </div>
+            {% endfor %}
         </div>
     </div>
-    {% endblock content %}
-
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-            if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-                });
-            }
-            });
-        }
-    </script>
-</body>
-</html>
+</nav>
+{% block content %}
+<div class="hero center-children-vertically">
+    <div class="container padded inverse">
+        <div class="col w6 large">
+            <h1>{{config.extra.newsletter_home.header}}</h1>
+            <h3>{{config.extra.newsletter_home.subheader}}</h3>
+        </div>
+    </div>
+</div>
+{% endblock content %} {% endblock page %}

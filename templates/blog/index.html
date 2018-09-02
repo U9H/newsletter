@@ -1,0 +1,21 @@
+{% extends "master/index.html" %} {% block page %}
+<div class="blog">
+    <nav style="background-image: url(/media/default_pattern.png)">
+        <div class="max-width-container">
+            <a href="/" class="logo">
+                <img class="col w2" src="{{config.extra.newsletter_logo}}" />
+            </a>
+
+            <div class="links">
+                {% for item in config.extra.newsletter_menu %}
+                <a href="{{ item.url }}">
+                    {{ item.name }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </nav>
+
+    {% block content %} {% endblock content %}
+</div>
+{% endblock page %}

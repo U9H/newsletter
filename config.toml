@@ -1,3 +1,6 @@
+# Title of the website
+title = "U9H Design"
+
 # The URL the site will be built for
 base_url = "https://u9h.design"
 
@@ -12,4 +15,14 @@ highlight_code = true
 build_search_index = true
 
 [extra]
-# Put all your custom variables here
+newsletter_cms = true
+newsletter_menu = [ 
+    {url = "/blog", name = "Blog"},
+    {url = "mailto:alex@u9h.design", name = "Contact"}
+]
+newsletter_logo = "/media/default_logo.png"
+[extra.newsletter_home]
+header = "More than just design."
+subheader = "We are a fully-digital design studio committed to transparency and creativity."
+[extra.newsletter_blog]
+nav_background = "/media/default_pattern"

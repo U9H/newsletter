@@ -1,3 +1,3 @@
 +++
-template = "blog_posts.html"
+template = "blog/posts.html"
 +++

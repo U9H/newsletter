@@ -60,3 +60,11 @@ a {
 p a {
     text-decoration: underline;
 }
+
+// style links in nav
+nav a {
+    @extend %base-type-other;
+    color: white;
+    text-transform: uppercase;
+    align-items: flex-end;
+}
