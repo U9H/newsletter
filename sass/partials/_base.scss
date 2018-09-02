@@ -1,0 +1,25 @@
+// Font weights
+$light: 300;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: 'PT Serif', serif;
+$base-font-weight: $regular;
+$base-font-size: 18px;
+$base-line-height: 32px;
+
+// header font
+$base-header-font-family: 'Playfair Display', serif;
+$base-header-font-weight: $bold;
+$base-header-font-size: 48px;
+$base-header-line-height: 64px;
+
+// other font
+$base-other-font-family: 'Barlow', sans-serif;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 18px;
+$fixed-line-height: $base-line-height;
+

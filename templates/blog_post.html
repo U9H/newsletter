@@ -1,0 +1,11 @@
+{% extends "blog_posts.html" %} {% block content %}
+<div class="container">
+    <section class="col w8">
+        <h1>{{ page.title }}</h1>
+        <p>
+            {{ page.content | safe }}
+        </p>
+    </section>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|PT+Serif:400,400i,700|Playfair+Display:700');
+
+%base-type {
+    line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    color: $font-color;
+}
+
+%base-type-header {
+    line-height: $base-header-line-height;
+    font-weight: $base-header-font-weight;
+    font-family: $base-header-font-family;
+    font-size: $base-header-font-size;
+    letter-spacing: 0.01em;
+    color: $font-header-color;
+    text-decoration: none;
+}
+
+%base-type-other {
+    @extend %base-type;
+    color: $font-other-color;
+    font-family: $base-other-font-family;
+}
+
+p {
+    @extend %base-type;
+    text-align: justify;
+    margin-bottom: 24px;
+    border-collapse: collapse;
+}
+
+h1 {
+    @extend %base-type-header;
+    margin-bottom: 24px;
+}
+
+h2 {
+    @extend %base-type-header;
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 12px;
+    margin-top: 48px;
+}
+
+h3 {
+    @extend %base-type-header;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+// remove text decoration from elements within an anchor block
+a {
+    text-decoration: none;
+}
+
+p a {
+    text-decoration: underline;
+}
