@@ -2,20 +2,27 @@
 <div class="blog">
     <nav style="background-image: url(/media/default_pattern.png)">
         <div class="max-width-container">
-            <a href="/" class="logo">
-                <img class="col w2" src="{{config.extra.newsletter_logo}}" />
+
+            <a href="/blog" class="logo">
+                <img src="{{config.extra.newsletter.logo}}" />
             </a>
 
             <div class="links">
-                {% for item in config.extra.newsletter_menu %}
+                {% for item in config.extra.newsletter.blog.menu %}
                 <a href="{{ item.url }}">
                     {{ item.name }}
                 </a>
                 {% endfor %}
+                <a href="/">
+                    Back Home
+                    <i class="material-icons">arrow_forward</i>
+
+                </a>
+
             </div>
+
         </div>
     </nav>
-
     {% block content %} {% endblock content %}
 </div>
 {% endblock page %}

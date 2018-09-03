@@ -15,14 +15,19 @@ highlight_code = true
 build_search_index = true
 
 [extra]
-newsletter_cms = true
-newsletter_menu = [ 
+[extra.newsletter]
+cms = true
+logo = "/media/default_logo.png"
+menu = [ 
     {url = "/blog", name = "Blog"},
     {url = "mailto:alex@u9h.design", name = "Contact"}
 ]
-newsletter_logo = "/media/default_logo.png"
-[extra.newsletter_home]
+
+[extra.newsletter.home]
 header = "More than just design."
 subheader = "We are a fully-digital design studio committed to transparency and creativity."
-[extra.newsletter_blog]
+
+[extra.newsletter.blog]
 nav_background = "/media/default_pattern"
+menu = [
+]

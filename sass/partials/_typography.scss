@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow|PT+Serif:400,400i,700|Playfair+Display:700');
+@import url('https://fonts.googleapis.com/css?family=Barlow:700|PT+Serif:400,400i,700|Playfair+Display:700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 %base-type {
     line-height: $base-line-height;
@@ -22,6 +23,8 @@
     @extend %base-type;
     color: $font-other-color;
     font-family: $base-other-font-family;
+    font-weight: bold;
+    letter-spacing: 0.07em;
 }
 
 p {
@@ -34,6 +37,7 @@ p {
 h1 {
     @extend %base-type-header;
     margin-bottom: 24px;
+    margin-top: 56px;
 }
 
 h2 {
@@ -66,5 +70,4 @@ nav a {
     @extend %base-type-other;
     color: white;
     text-transform: uppercase;
-    align-items: flex-end;
 }

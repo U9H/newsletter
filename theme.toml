@@ -5,23 +5,19 @@ homepage = "https://github.com/u9h/newsletter"
 min_version = "0.4.1"
 
 [extra]
-# whether netlify_cms will be used
-newsletter_cms = true
-# default menu items
-newsletter_menu = [ 
-    {url = "/blog", name = "Blog"}
+[extra.newsletter]
+cms = true
+logo = "/media/default_logo.png"
+menu = [ 
+    {url = "/blog", name = "Blog"},
+    {url = "mailto:alex@u9h.design", name = "Contact"}
 ]
-# logo
-newsletter_logo = "/media/default_logo.png"
-# Content that appears on static pages
-[extra.newsletter_home]
+
+[extra.newsletter.home]
 header = "More than just design."
 subheader = "We are a fully-digital design studio committed to transparency and creativity."
 
-# Blog specific properties
-[extra.newsletter_blog]
+[extra.newsletter.blog]
 nav_background = "/media/default_pattern"
-
-[author]
-name = "U9H"
-homepage = "https://u9h.design"
+menu = [
+]

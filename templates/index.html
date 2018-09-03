@@ -2,10 +2,10 @@
 <nav>
     <div class="container padded-h">
         <a href="/">
-            <img class="col w2" src="{{config.extra.newsletter_logo}}" />
+            <img class="col w2" src="{{config.extra.newsletter.logo}}" />
         </a>
         <div class="col w10 v-middle align-right links">
-            {% for item in config.extra.newsletter_menu %}
+            {% for item in config.extra.newsletter.menu %}
             <a href="{{ item.url }}">
                 {{ item.name }}
             </a>
@@ -17,8 +17,8 @@
 <div class="hero center-children-vertically">
     <div class="container padded inverse">
         <div class="col w6 large">
-            <h1>{{config.extra.newsletter_home.header}}</h1>
-            <h3>{{config.extra.newsletter_home.subheader}}</h3>
+            <h1>{{config.extra.newsletter.home.header}}</h1>
+            <h3>{{config.extra.newsletter.home.subheader}}</h3>
         </div>
     </div>
 </div>

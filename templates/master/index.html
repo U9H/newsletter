@@ -7,15 +7,15 @@
     <title>{{config.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600" rel="stylesheet">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600" rel="stylesheet"> {% if config.extra.newsletter.cms %}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{% endif %}
 </head>
 
 <body>
     {% block page %} {% endblock %}
 </body>
 
-{% if config.extra.newsletter_cms %}
+{% if config.extra.newsletter.cms %}
 <script>
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
