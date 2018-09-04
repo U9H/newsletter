@@ -1,0 +1,12 @@
+.blog {
+    nav {
+        animation-name: slide;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; 
+    }
+}
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 600px 150px; }
+}

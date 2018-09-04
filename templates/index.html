@@ -1,4 +1,6 @@
 {% extends "master/index.html" %} {% block page %}
+<div class="quirky-bg" style="background-image: url(/media/default_pattern.png)">a
+</div>
 <nav>
     <div class="container padded-h">
         <a href="/">
@@ -14,7 +16,7 @@
     </div>
 </nav>
 {% block content %}
-<div class="hero center-children-vertically">
+<div class="center-children-vertically">
     <div class="container padded inverse">
         <div class="col w6 large">
             <h1>{{config.extra.newsletter.home.header}}</h1>

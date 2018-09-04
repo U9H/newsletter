@@ -9,6 +9,21 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600" rel="stylesheet"> {% if config.extra.newsletter.cms %}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{% endif %}
+    <style>
+    .quirky-bg {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        animation-name: slide;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        background-repeat: repeat;
+        z-index: -100;
+    }
+    </style>
 </head>
 
 <body>

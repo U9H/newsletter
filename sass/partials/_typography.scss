@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:700|PT+Serif:400,400i,700|Playfair+Display:700');
+@import url('https://fonts.googleapis.com/css?family=Barlow:500|700|PT+Serif:400,400i,700|Playfair+Display:700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 %base-type {
@@ -69,5 +69,12 @@ p a {
 nav a {
     @extend %base-type-other;
     color: white;
+    text-transform: uppercase;
+}
+
+small {
+    @extend %base-type-other;
+    font-size: 12px;
+    font-weight: 500;
     text-transform: uppercase;
 }

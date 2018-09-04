@@ -1,11 +1,15 @@
 {% extends "blog/index.html" %} {% block content %}
-<div class="container">
-    <section class="col w8">
-        <h1>{{ page.title }}</h1>
-        <p>
-            {{ page.content | safe }}
-        </p>
-    </section>
-</div>
-
+<section class='container'>
+    <h1 class="col w8">{{ page.title }}</h1>
+    <div class="col w8">
+        <p>{{ page.content | safe | markdown(inline=true) }}</p>
+    </div>
+    <div class="col w4">
+        {% if page.extra.author %}<small>By {{ page.extra.author }}</small>{% endif %}
+        <br>
+        {% if page.date %}<small>{{ page.date | date(format='%b %m, %Y at %H:%M %Z') }}</small>{% endif %}
+        <br>
+        {% if page.taxonomies.category %}<small>[{{ page.taxonomies.category[0] }}]</small>{% endif %}
+    </div>
+</section>
 {% endblock content %}
