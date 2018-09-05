@@ -79,6 +79,16 @@ small {
     letter-spacing: 0.07em;
 }
 
+.blog {
+    section {
+        small {
+            text-transform: none;
+            font-weight: 400;
+            font-size: 14px;
+        }
+    }
+}
+
 .main p {
     @extend %base-type-other;
     font-size: 24px;
