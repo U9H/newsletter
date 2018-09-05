@@ -1,3 +1,33 @@
 .blog nav {
     background-repeat: repeat;
 }
+
+.reverse {
+    .button {
+        border-color: white;
+        color: white;
+        &:hover {
+            background: white;
+            color: $accent-alt-color;
+        }
+    }
+    p, h1, h2, h3, h4, h5, h6, small {
+        color: white !important;
+    }
+}
+.button {
+    @extend %base-type-other;
+    border-color: $accent-color;
+    color: $accent-color;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    border: 1px solid;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: 0.2s all ease;
+    &:hover {
+        background: $accent-color;
+        color: white;
+    }
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:500|700|PT+Serif:400,400i,700|Playfair+Display:700');
+@import url('https://fonts.googleapis.com/css?family=Barlow:300|400|700|PT+Serif:400,400i,700|Playfair+Display:700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 %base-type {
@@ -21,10 +21,7 @@
 
 %base-type-other {
     @extend %base-type;
-    color: $font-other-color;
     font-family: $base-other-font-family;
-    font-weight: bold;
-    letter-spacing: 0.07em;
 }
 
 p {
@@ -77,4 +74,13 @@ small {
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
+    color: $font-other-color;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+}
+
+.main p {
+    @extend %base-type-other;
+    font-size: 24px;
+    font-weight: 300;
 }
