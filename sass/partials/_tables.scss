@@ -1,0 +1,35 @@
+table, th, td {
+    border-spacing: 0;
+    border-collapse: separate;
+}
+table {
+    @extend %base-type-other;
+    font-size: 18px;
+    font-weight: 300;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    th, td {
+        border-bottom: 1px solid $border-color;
+        padding: 8px 16px;
+    }
+    tr:last-child>td {
+        border-bottom: none;
+    }
+    th {
+        font-weight: 700;
+        border-right: 1px solid $border-color;
+        background-color: $background-alt-color;
+        &:last-child {
+            border-right: none;
+        }
+    }
+    tr {
+        td {
+            border-right: 1px solid $border-color;
+        }
+        td:last-child {
+            border-right: none;
+        }
+    }
+}
+

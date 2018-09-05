@@ -9,6 +9,11 @@
     color: $font-color;
 }
 
+%base-type-spacing {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
 %base-type-header {
     line-height: $base-header-line-height;
     font-weight: $base-header-font-weight;
@@ -93,4 +98,26 @@ small {
     @extend %base-type-other;
     font-size: 24px;
     font-weight: 300;
+}
+
+ul {
+    @extend %base-type;
+    @extend %base-type-spacing;
+    list-style-position: outside;
+    margin-bottom: 24px;
+    
+    ul {
+        margin-bottom: 0;
+        margin-left: 48px;
+    }
+    li {
+        position: relative;
+        left: -1em;
+    }
+    li::before {
+        display: inline-block;
+        content: "\2022"; 
+        color: $accent-color;
+        width: 1em;
+    }
 }
