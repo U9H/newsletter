@@ -1,5 +1,6 @@
 {% extends "blog/index.html" %} {% block content %} {% set section = get_section(path="blog/_index.md") %} {% for post in
 section.pages %}
+{% if post.draft == false %}
 <div class="container small initial-content">
     <section class="col w12 large">
         <a href="{{post.permalink}}" class="block">
@@ -11,4 +12,5 @@ section.pages %}
     </section>
     </a>
 </div>
+{% endif %}
 {% endfor %} {% endblock content %}
