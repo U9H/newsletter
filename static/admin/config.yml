@@ -13,7 +13,7 @@ collections:
     format: "toml-frontmatter"
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Template", name: "template", widget: "hidden", default: "blog_post.html"}
+      - {label: "Template", name: "template", widget: "hidden", default: "blog/post.html"}
       - {label: "Date", name: "date", widget: "date"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Description", name: "description", widget: "text"}
