@@ -42,7 +42,7 @@ h1 {
     margin-top: 56px;
 }
 
-h2 {
+h2, .content h1 {
     @extend %base-type-header;
     font-size: 36px;
     line-height: 48px;
@@ -50,12 +50,17 @@ h2 {
     margin-top: 48px;
 }
 
-h3 {
+h3, .content h2 {
     @extend %base-type-header;
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 12px;
-    margin-top: 12px;
+    margin-top: 36px;
+}
+
+.content h2 {
+    font-family: $base-other-font-family;
+    font-weight: 700;
 }
 
 // remove text decoration from elements within an anchor block
