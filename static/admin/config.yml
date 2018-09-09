@@ -15,5 +15,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Template", name: "template", widget: "hidden", default: "blog_post.html"}
       - {label: "Date", name: "date", widget: "date"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Description", name: "description", widget: "text"}
       - {body: "Body", name: "body", widget: "markdown"}
       
