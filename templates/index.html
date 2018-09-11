@@ -24,10 +24,12 @@
         <div class="col w8">
             <h1>{{config.extra.newsletter.home.header}}</h1>
         </div>
+        {% if config.extra.newsletter.home.subheader %}
         <div class="col w8">
             <p>{{config.extra.newsletter.home.subheader}}</p>
         </div>
-        <div class="col w4 pull-right">
+        {% endif %}
+        <div class="col w4 center-vertical">
             <a href="mailto:alex@u9h.design" class="button">
                 Work With Us <i class="material-icons">arrow_forward</i>
             </a>
