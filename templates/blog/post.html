@@ -5,11 +5,17 @@
         <p>{{ page.content | safe | markdown(inline=true) }}</p>
     </div>
     <div class="col w4">
-        {% if page.extra.author %}<small>By {{ page.extra.author }}</small>{% endif %}
+        {% if page.taxonomies.authors %}<small>By {{ page.taxonomies.authors[0] }}</small>{% endif %}
         <br>
         {% if page.date %}<small>{{ page.date | date(format='%b %m, %Y at %H:%M %Z') }}</small>{% endif %}
         <br>
-        {% if page.taxonomies.category %}<small>[{{ page.taxonomies.category[0] }}]</small>{% endif %}
+        {% if page.taxonomies.categories %}
+            <small>
+                {% for category in page.taxonomies.categories %}
+                    [ {{ category }} ]<br>
+                {% endfor %}
+            </small>
+        {% endif %}
     </div>
 </section>
 {% endblock content %}
