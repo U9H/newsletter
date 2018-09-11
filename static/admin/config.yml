@@ -18,4 +18,17 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Description", name: "description", widget: "text"}
       - {body: "Body", name: "body", widget: "markdown"}
-      
+      - label: "Taxonomies"
+        name: "taxonomies"
+        widget: "object"
+        fields:
+          - label: "Authors"
+            name: "authors"
+            widget: "list"
+            field:
+              - {label: "Author", name: "author", widget: "string"}
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            field:
+              - {label: "Category", name: "category", widget: "string"}

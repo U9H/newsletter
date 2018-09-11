@@ -5,7 +5,7 @@ table, th, td {
 table {
     @extend %base-type-other;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     border: 1px solid $border-color;
     border-radius: 3px;
     th, td {
