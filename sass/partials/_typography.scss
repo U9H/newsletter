@@ -39,12 +39,13 @@ h1 {
     margin-top: 56px;
 }
 
-.main h1 {
+h1.display {
     font-size: 72px;
     line-height: 1.4em;
 }
 
-h2, .content h1 {
+h2,
+.content h1 {
     @extend %base-type-header;
     font-size: 36px;
     line-height: 48px;
@@ -52,7 +53,8 @@ h2, .content h1 {
     margin-top: 48px;
 }
 
-h3, .content h2 {
+h3,
+.content h2 {
     @extend %base-type-header;
     font-size: 24px;
     line-height: 32px;
@@ -116,7 +118,6 @@ ul {
     @extend %base-type-spacing;
     list-style-position: outside;
     margin-bottom: 24px;
-    
     ul {
         margin-bottom: 0;
         margin-left: 48px;
@@ -127,7 +128,7 @@ ul {
     }
     li::before {
         display: inline-block;
-        content: "\2022"; 
+        content: "\2022";
         color: $accent-color;
         width: 1em;
     }

@@ -1,5 +1,4 @@
 $max-width: 1120px;
-
 %max-width-container {
     max-width: $max-width;
     width: 100%;
@@ -15,8 +14,14 @@ $max-width: 1120px;
     @extend %grid;
     @extend %max-width-container;
     margin: 0 auto;
-
-    p, h1, h2, h3, h4, h5, h6, small {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    small {
         padding: 0px 24px;
     }
 }
@@ -73,13 +78,16 @@ nav {
         .image {
             padding-bottom: 48px;
         }
+        .gifv {
+            width: 100%;
+        }
     }
 }
 
 .button {
     display: inline-flex;
     align-items: center;
-    padding: 12px 20px;
+    padding: 12px 32px;
     i {
         margin-left: 12px;
         font-size: inherit;
@@ -95,7 +103,8 @@ table {
     margin-bottom: 36px;
 }
 
-td, th {
+td,
+th {
     padding: 12px 24px;
 }
 

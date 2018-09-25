@@ -1,41 +1,59 @@
 {% extends "master/index.html" %} {% block page %}
 <div class="main">
-<div class="quirky-bg" style="background-image: url(/media/default_pattern.png)">a
-</div>
+    <div class="quirky-bg" style="background-image: url(/media/default_pattern.png)">a
+    </div>
 
-<nav class="fixed">
-    <div class="max-width-container">
-        <a href="/" class="logo">
-            <img src="{{config.extra.newsletter.logo}}" />
-        </a>
-        <div class="links">
-            {% for item in config.extra.newsletter.menu %}
-            <a href="{{ item.url }}">
-                {{ item.name }}
+    <nav class="fixed">
+        <div class="max-width-container">
+            <a href="/" class="logo">
+                <img src="{{config.extra.newsletter.logo}}" />
             </a>
-            {% endfor %}
+            <div class="links">
+                {% for item in config.extra.newsletter.menu %}
+                <a href="{{ item.url }}">
+                    {{ item.name }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    <div class="full-page center-vertical">
+        <div class="container reverse">
+            <div class="col w8">
+                <h1 class="display">{{config.extra.newsletter.home.header}}</h1>
+            </div>
+            {% if config.extra.newsletter.home.subheader %}
+            <div class="col w8">
+                <p>{{config.extra.newsletter.home.subheader}}</p>
+            </div>
+            {% endif %}
+            <div class="col w4 center-vertical">
+                <a href="mailto:alex@u9h.design" class="button">
+                    Work With Us <i class="material-icons">arrow_forward</i>
+                </a>
+            </div>
         </div>
     </div>
-</nav>
 
-{% block content %}
-<div class="full-page center-vertical">
-    <div class="container reverse">
-        <div class="col w8">
-            <h1>{{config.extra.newsletter.home.header}}</h1>
-        </div>
-        {% if config.extra.newsletter.home.subheader %}
-        <div class="col w8">
-            <p>{{config.extra.newsletter.home.subheader}}</p>
-        </div>
-        {% endif %}
-        <div class="col w4 center-vertical">
-            <a href="mailto:alex@u9h.design" class="button">
-                Work With Us <i class="material-icons">arrow_forward</i>
-            </a>
+    <div class="white">
+        <div class="container">
+            <div class="col w12">
+                <h1>Our Services</h1>
+            </div>
+            <div class="col w4">
+                <p>Web Development</p>
+            </div>
+            <div class="col w4">
+                <p>Web & App Design</p>
+            </div>
+            <div class="col w4">
+                <p>Graphics Design</p>
+            </div>
+            <br><br><br>
         </div>
     </div>
-</div>
-{% endblock content %} 
+    {% endblock content %}
 </div>
 {% endblock page %}
