@@ -26,7 +26,7 @@
             </div>
             {% if config.extra.newsletter.home.subheader %}
             <div class="col w8">
-                <p>{{config.extra.newsletter.home.subheader}}</p>
+                <p class="display">{{config.extra.newsletter.home.subheader}}</p>
             </div>
             {% endif %}
             <div class="col w4 center-vertical">
@@ -42,15 +42,61 @@
             <div class="col w12">
                 <h1>Our Services</h1>
             </div>
-            <div class="col w4">
-                <p>Web Development</p>
-            </div>
+
             <div class="col w4">
                 <p>Web & App Design</p>
             </div>
+
             <div class="col w4">
-                <p>Graphics Design</p>
+                <p>Web Development</p>
             </div>
+
+            <div class="col w4">
+                <p>Graphic Design & Illustration</p>
+            </div>
+
+            <div class="col w4">
+                <p>Animation</p>
+            </div>
+
+            <div class="col w4">
+                <p>Video Editing</p>
+            </div>
+
+            <div class="col w4">
+                <p>Music Composition & Sound Design</p>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <div class="white" id="people">
+        <div class="container">
+            <div class="col w12">
+                <h1>About</h1>
+            </div>
+
+            <div class="col w8" style="margin-bottom: 48px;">
+                <p>
+                    All good companies exist to solve a problem, and we’re no different. Traditional design groups are stuck in the 1980’s. We’ve
+                    moved on to a small, agile, solely internet-based team that saves us time and money. We hope to pass
+                    those savings on to you. We use the best available technology to ensure your end product is fast, secure,
+                    and inexpensive to maintain.
+                </p>
+                <p>
+                    We’re scattered across the states in Texas, Virginia, Pennsylvania, and New York. We’re also all online, so you can talk
+                    with us anywhere.
+                </p>
+            </div>
+            <div class="col w4"></div>
+
+            {% for person in config.extra.newsletter.home.people %}
+            <div class="col w4">
+                {{ macros::person(name=person.name, path=person.image, position=person.position, location=person.location) }}
+            </div>
+            {% endfor %}
+
+
             <br><br><br>
         </div>
     </div>

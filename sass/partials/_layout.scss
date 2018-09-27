@@ -94,6 +94,26 @@ nav {
     }
 }
 
+.person {
+    p,
+    small,
+    a {
+        padding-left: 0;
+        padding-right: 0;
+        line-height: 1.6;
+        margin-top: 24px;
+        display: block;
+    }
+    img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+        max-width: 200px;
+    }
+    margin-bottom: 56px;
+    text-align: center;
+}
+
 .pull-right {
     text-align: right;
 }

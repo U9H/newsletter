@@ -26,6 +26,14 @@ menu = [
 [extra.newsletter.home]
 header = "More than just design."
 subheader = "We are a fully-digital design studio committed to transparency and creativity."
+people = [
+    { name = "Person Person", image = "default.svg", position = "Employee", location = "Dallas, TX" },
+    { name = "Person Person", image = "default.svg", position = "Employee", location = "Dallas, TX" },
+    { name = "Person Person", image = "default.svg", position = "Employee", location = "Dallas, TX" },
+    { name = "Person Person", image = "default.svg", position = "Employee", location = "Dallas, TX" },
+    { name = "Person Person", image = "default.svg", position = "Employee", location = "Dallas, TX" },
+    { name = "Person Person", image = "default.svg", position = "Employee", location = "Dallas, TX" },
+]
 
 [extra.newsletter.blog]
 nav_background = "/media/default_pattern"

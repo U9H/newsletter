@@ -1,0 +1,6 @@
+{% macro person(path="default.svg", name="Name", position, location) %}
+<div class="person">
+    <img src="/media/people/{{path}}" alt="{{name}}" />
+    <small>{{name}}, {{position}}<br>{{location}}</small>
+</div>
+{% endmacro person %}

@@ -33,6 +33,20 @@ p {
     border-collapse: collapse;
 }
 
+p,
+h1,
+a,
+small,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .large {
+        font-size: 150%;
+    }
+}
+
 h1 {
     @extend %base-type-header;
     margin-bottom: 24px;
@@ -106,7 +120,7 @@ small {
     }
 }
 
-.main p {
+p.display {
     @extend %base-type-other;
     font-size: 24px;
     font-weight: 300;
