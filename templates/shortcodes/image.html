@@ -1,4 +1,4 @@
 <div class="image">
-    <img src="/media/{{path}}" alt="{{description}}" />
-    <small>{{description}}</small>
+    <img src="/media/{{path}}" {% if no_top_margin %}style="margin-top: 0;" {% endif %} alt="{{description}}" /> {% if not
+    notext %} <small>{{description}}</small> {% endif %}
 </div>
