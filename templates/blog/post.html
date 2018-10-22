@@ -1,21 +1,23 @@
-{% extends "blog/index.html" %} {% block content %}
-<section class='container'>
+{% extends "blog/index.html" %} {% block content %} {% if page.extra.cover %}
+<div class="hero" style="background-image: url(/{{page.path}}{{page.extra.cover}});">
     <h1 class="col w8">{{ page.title }}</h1>
-    <div class="col w8 content">
-        <p>{{ page.content | safe | markdown(inline=true) }}</p>
-    </div>
-    <div class="col w4">
-        {% if page.taxonomies.authors %}<small>By {{ page.taxonomies.authors[0] }}</small>{% endif %}
-        <br>
-        {% if page.date %}<small>{{ page.date | date(format='%b %m, %Y at %H:%M %Z') }}</small>{% endif %}
-        <br>
-        {% if page.taxonomies.categories %}
-            <small>
-                {% for category in page.taxonomies.categories %}
-                    [ {{ category }} ]<br>
-                {% endfor %}
-            </small>
+</div>
+<section class='container'>
+    {% else %}
+    <section class='container'>
+        <h1 class="col w8">{{ page.title }}</h1>
         {% endif %}
-    </div>
-</section>
-{% endblock content %}
+        <div class="col w8 content">
+            <p>{{ page.content | safe | markdown(inline=true) }}</p>
+        </div>
+        <div class="col w4">
+            {% if page.taxonomies.authors %}<small>By {{ page.taxonomies.authors[0] }}</small>{% endif %}
+            <br> {% if page.date %}<small>{{ page.date | date(format='%b %m, %Y at %H:%M %Z') }}</small>{% endif %}
+            <br> {% if page.taxonomies.categories %}
+            <small>
+                {% for category in page.taxonomies.categories %} [ {{ category }} ]<br> {% endfor %}
+            </small>
+            {% endif %}
+        </div>
+    </section>
+    {% endblock content %}

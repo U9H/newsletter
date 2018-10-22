@@ -111,11 +111,28 @@ small {
 }
 
 .blog {
+    .hero {
+        h1 {
+            color: white;
+            text-align: center;
+        }
+    }
     section {
         small {
             text-transform: none;
             font-weight: 400;
             font-size: 14px;
+        }
+    }
+    .container {
+        p:first-child::first-letter {
+            font-size: 400%;
+            padding: 3px 12px;
+            border-radius: 3px;
+            background: #1d1e1e;
+            color: white;
+            vertical-align: 0.31em;
+            margin-right: 0.1em;
         }
     }
 }

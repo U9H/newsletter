@@ -46,6 +46,10 @@ nav {
 }
 
 .blog {
+    .hero {
+        background-size: cover;
+        background-attachment: fixed;
+    }
     section {
         img {
             border-radius: 3px;
