@@ -3,4 +3,24 @@
     <img src="/media/people/{{path}}" alt="{{name}}" />
     <small>{{name}}, {{position}}<br>{{location}}</small>
 </div>
-{% endmacro person %}
+{% endmacro person %} 
+
+{% macro comments(url, slug, disqus_url) %}
+{% if disqus_url %}
+<div id="disqus_thread" class="col w8"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = "{{ url | safe }}"
+        this.page.identifier = "{{ slug | safe }}";
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{{disqus_url}}/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+{% endif %}
+
+{% endmacro comments %}

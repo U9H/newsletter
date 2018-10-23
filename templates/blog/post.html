@@ -26,5 +26,6 @@
             </small>
             {% endif %}
         </div>
+        {{ macros::comments(url=current_url, slug=current_path, disqus_url=config.extra.newsletter.blog.disqus_url) }}
     </section>
     {% endblock content %}

@@ -28,5 +28,7 @@ people = [
 [extra.newsletter.blog]
 nav_background = "/media/default_pattern"
 adwords_code = "123456"
+mailchimp_embed = false
+disqus_url = "u9h.disqus.com"
 menu = [
 ]
