@@ -1,11 +1,18 @@
-{% extends "blog/index.html" %} {% block header %} {% if config.extra.newsletter.blog.adwords_code %}
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "{{config.extra.newsletter.blog.adwords_code}}",
-        enable_page_level_ads: true
-    });
-</script> {% endif %} {% endblock header %} {% block content %} {% if page.extra.cover %}
+{% extends "blog/index.html" %} 
+{% block header %} 
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:url" content="{{current_url}}">
+{% if page.extra.cover %} 
+    {% set image = resize_image(path=page.path ~ page.extra.cover, width=1200, height=730, op="fill") %}
+    <meta property="og:image" content='{{image}}'> 
+{% endif %}
+{% if page.taxonomies.authors %}<meta property="article:author" content="{{page.taxonomies.authors[0]}}">{% endif %}
+{% if config.extra.newsletter.blog.adwords_code %}<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "{{config.extra.newsletter.blog.adwords_code}}",enable_page_level_ads: true});</script>{% endif %} 
+{% endblock header %} 
+
+{% block content %} 
+{% if page.extra.cover %}
 <div class="hero" style="background-image: url(/{{page.path}}{{page.extra.cover}});">
     <h1 class="col w8">{{ page.title }}</h1>
 </div>
