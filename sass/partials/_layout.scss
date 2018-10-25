@@ -23,6 +23,9 @@ $max-width: 1120px;
     h6,
     small {
         padding: 0px 24px;
+        @media screen and (max-width: $mobile) {
+            padding: 0px 12px;
+        }
     }
 }
 
@@ -97,6 +100,19 @@ nav {
         }
         .gifv {
             width: 100%;
+        }
+    }
+    @media screen and (max-width: $tablet) {
+        .article {
+            .first {
+                order: 1;
+            }
+            .second {
+                order: 2;
+            }
+            .third {
+                order: 3;
+            }
         }
     }
 }

@@ -20,23 +20,23 @@
     &.v-middle { align-self: center; }
     &.v-top { align-self: start; }
     &.v-bottom { align-self: end; }
-/*
-    &.large {
-        @media only screen and (max-width: $large) {
+
+    &.lg {
+        @media only screen and (max-width: $desktop) {
             grid-column-end: span 12;
         }
     }
 
-    &.med {
-        @media only screen and (max-width: $medium) {
+    &.md {
+        @media only screen and (max-width: $tablet) {
             grid-column-end: span 12;
         }
     }
 
-    &.small {
-        @media only screen and (max-width: $small) {
+    &.sm {
+        @media only screen and (max-width: $mobile) {
             grid-column-end: span 12;
         }
-    }*/
+    }
 
 }
