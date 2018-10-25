@@ -86,6 +86,15 @@ nav {
             max-width: 900px;
         }
     }
+    .email-signup {
+        padding: 24px;
+        @media screen and (max-width: $mobile) {
+            padding: 0px 12px;
+        }
+        > * {
+            padding: 0;
+        }
+    }
     #disqus_thread {
         padding: 24px;
     }

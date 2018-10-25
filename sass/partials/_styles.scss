@@ -46,6 +46,17 @@ nav {
 }
 
 .blog {
+    .button {
+        background: $accent-color;
+        border: none;
+        color: white;
+        display: block;
+        transition: background 0.2s ease;
+        text-align: center;
+        &:hover {
+            background: darken($accent-color, 5);
+        }
+    }
     .hero {
         background-size: cover;
         background-position: center;
@@ -59,6 +70,18 @@ nav {
         }
         .gifv {
             border-radius: 12px;
+        }
+    }
+    .email-signup {
+        background-repeat: repeat;
+        background-image: url('/media/default_pattern.png');
+        border-radius: 3px;
+        h2 {
+            margin-top: 24px;
+            color: white;
+        }
+        p {
+            color: white;
         }
     }
 }
