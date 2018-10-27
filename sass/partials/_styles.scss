@@ -30,9 +30,10 @@ nav {
 
 .button {
     @extend %base-type-other;
+    cursor: pointer;
     border-color: $accent-color;
     color: $accent-color;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.1em;
     border: 1px solid;
@@ -50,7 +51,6 @@ nav {
         background: $accent-color;
         border: none;
         color: white;
-        display: block;
         transition: background 0.2s ease;
         text-align: center;
         &:hover {
@@ -77,7 +77,6 @@ nav {
         background-image: url('/media/default_pattern.png');
         border-radius: 3px;
         h2 {
-            margin-top: 24px;
             color: white;
         }
         p {
