@@ -28,7 +28,11 @@ people = [
 [extra.newsletter.blog]
 nav_background = "/media/default_pattern"
 adwords_code = "123456"
-mailchimp_embed = false
 disqus_url = "u9h.disqus.com"
 menu = [
 ]
+
+[extra.newsletter.blog.mailchimp]
+prefix = "design.us19"
+uid = "7d95c50d4419888f846703410"
+id = "de6298b77b"

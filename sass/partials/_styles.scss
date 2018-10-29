@@ -76,13 +76,20 @@ nav {
         background-repeat: repeat;
         background-image: url('/media/default_pattern.png');
         border-radius: 3px;
-        h2 {
+        h2, h3 {
             color: white;
         }
         p {
             color: white;
         }
+        h3 {
+            text-align: center;
+        }
     }
+}
+
+.display-none {
+    display: none !important;
 }
 
 .full-page {
@@ -97,4 +104,13 @@ pre {
 
 .person img {
     border-radius: 100%;
+}
+
+input[type=email], input[type=text], input[type=number], input[type=password] {
+    border-radius: 3px;
+    font-size: 18px;
+    border: none;
+    background: white;
+    padding: 16px 16px;
+    min-width: 0 !important;
 }

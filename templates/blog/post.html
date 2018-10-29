@@ -36,12 +36,26 @@
         </div>
     </div>
     <section class="container">
+        {% if config.extra.newsletter.blog.mailchimp %}
         <div class="email-signup col w8 md">
             <h2>Get unique perspectives on design & development</h2>
             <p>We'll be honest, U9H isn't a big-name agency or a Silicon Valley superstar (yet).  But give us a chance, and we promise to deliver impactful stories that enhance your design & development skills.
             </p>
-            <div class="button">Let's do it!</div>
+            <div class="button email-start-button">Let's do it!</div>
+            <form class="email-form display-none" 
+                method="POST"
+                action='https://{{config.extra.newsletter.blog.mailchimp.prefix}}.list-manage.com/subscribe/post?u={{config.extra.newsletter.blog.mailchimp.uid}}&amp;id={{config.extra.newsletter.blog.mailchimp.id}}'
+                data-prefix="{{config.extra.newsletter.blog.mailchimp.prefix}}"
+                data-uid="{{config.extra.newsletter.blog.mailchimp.uid}}"
+                data-id="{{config.extra.newsletter.blog.mailchimp.id}}">
+                <div>
+                    <input type="email" name="EMAIL" required/>
+                    <input type="submit" class="button"/>
+                </div>
+            </form>
+            <h3 class="email-finish display-none">You're awesome, thanks!</h3>
         </div>
+        {% endif %}
         {% if config.extra.newsletter.blog.mailchimp_embed %}
             {{ config.extra.newsletter.blog.mailchimp_embed | safe }}
         {% endif %}

@@ -103,6 +103,24 @@ nav {
                 margin-left: 0;
             }
         }
+        .email-form {
+            &>div {
+                display: flex;
+                @media screen and (max-width: $mobile) {
+                    flex-direction: column;
+                    .button {
+                        margin-left: 0 !important;
+                        margin-top: 12px;
+                    }
+                }
+                input[type=email]{
+                    flex-grow: 1;
+                }
+                .button {
+                    margin-left: 12px;
+                }
+            }
+        }
     }
     #disqus_thread {
         padding: 24px;
