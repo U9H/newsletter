@@ -37,7 +37,16 @@
 </head>
 
 <body>
-    {% block page %} {% endblock %}
+    <div style="min-height: 100vh;">
+        {% block page %} {% endblock %}
+    </div>
+    <footer>
+        <div class="container">
+            <div class="col md w4">
+                <p> © 2018 U9H </p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 {% if config.extra.newsletter.cms %}

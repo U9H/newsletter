@@ -21,15 +21,15 @@
     {% block content %}
     <div class="full-page center-vertical">
         <div class="container reverse">
-            <div class="col w8">
+            <div class="col w8 lg">
                 <h1 class="display">{{config.extra.newsletter.home.header}}</h1>
             </div>
             {% if config.extra.newsletter.home.subheader %}
-            <div class="col w8">
+            <div class="col w8 md">
                 <p class="display">{{config.extra.newsletter.home.subheader}}</p>
             </div>
             {% endif %}
-            <div class="col w4 center-vertical">
+            <div class="col w4 center-vertical md center-on-collapse" style="margin-right: 24px;">
                 <a href="mailto:alex@u9h.design" class="button">
                     Work With Us <i class="material-icons">arrow_forward</i>
                 </a>
@@ -43,27 +43,27 @@
                 <h1>Our Services</h1>
             </div>
 
-            <div class="col w4">
+            <div class="col w4 md">
                 <p>Web & App Design</p>
             </div>
 
-            <div class="col w4">
+            <div class="col w4 md">
                 <p>Web Development</p>
             </div>
 
-            <div class="col w4">
+            <div class="col w4 md">
                 <p>Graphic Design & Illustration</p>
             </div>
 
-            <div class="col w4">
+            <div class="col w4 md">
                 <p>Animation</p>
             </div>
 
-            <div class="col w4">
+            <div class="col w4 md">
                 <p>Video Editing</p>
             </div>
 
-            <div class="col w4">
+            <div class="col w4 md">
                 <p>Music Composition & Sound Design</p>
             </div>
             <br><br><br>
@@ -76,7 +76,7 @@
                 <h1>About</h1>
             </div>
 
-            <div class="col w8" style="margin-bottom: 48px;">
+            <div class="col w8 md" style="margin-bottom: 48px;">
                 <p>
                     All good companies exist to solve a problem, and we’re no different. Traditional design groups are stuck in the 1980’s. We’ve
                     moved on to a small, agile, solely internet-based team that saves us time and money. We hope to pass
@@ -88,10 +88,10 @@
                     with us anywhere.
                 </p>
             </div>
-            <div class="col w4"></div>
+            <div class="col w4 md"></div>
 
             {% for person in config.extra.newsletter.home.people %}
-            <div class="col w4">
+            <div class="col w4 sm">
                 {{ macros::person(name=person.name, path=person.image, position=person.position, location=person.location) }}
             </div>
             {% endfor %}

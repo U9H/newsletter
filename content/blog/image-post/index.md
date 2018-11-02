@@ -2,7 +2,7 @@
 title = "This is my catchy title with an image!"
 template = "blog/post.html"
 date = 2018-09-08T02:53:02.263Z
-draft = true
+draft = false
 description = "A guide to everything you need to know about UI and UX design, with easy-to-follow examples."
 
 [taxonomies]

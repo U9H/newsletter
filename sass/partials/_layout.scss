@@ -28,6 +28,9 @@ $max-width: 1120px;
             padding: 0px 12px;
         }
     }
+    &.small {
+        max-width: 700px;
+    }
 }
 
 .full-page {
@@ -85,6 +88,13 @@ nav {
             margin: 0;
             width: 100%;
             max-width: 900px;
+        }
+    }
+    .posts {
+        .post {
+            a {
+                display: block;
+            }
         }
     }
     .email-signup {
@@ -151,6 +161,11 @@ nav {
             }
         }
     }
+}
+
+footer {
+    background: $very-light-gray;
+    padding: 24px;
 }
 
 .button {
