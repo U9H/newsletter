@@ -13,6 +13,7 @@ menu = [
     {url = "/blog", name = "Blog"},
     {url = "mailto:alex@u9h.design", name = "Contact"}
 ]
+analytics_code = "UA-12345678-1"
 
 [extra.newsletter.home]
 header = "More than just design."
