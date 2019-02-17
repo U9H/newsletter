@@ -2,7 +2,7 @@ name = "newsletter"
 description = "A theme used at u9h.design with a focus on readable content."
 license = "MIT"
 homepage = "https://github.com/u9h/newsletter"
-min_version = "0.4.1"
+min_version = "0.5.1"
 
 [extra]
 [extra.newsletter]
