@@ -13,7 +13,8 @@ menu = [
     {url = "/blog", name = "Blog"},
     {url = "mailto:alex@u9h.design", name = "Contact"}
 ]
-analytics_code = "UA-12345678-1"
+ackee_id = "29c58e50-cad8-44a8-bdc0-9bcb4543ba4e"
+ackee_server = "https://ackee.u9h.design"
 
 [extra.newsletter.home]
 header = "More than just design."
