@@ -21,6 +21,9 @@
         gtag('config', '{{config.extra.newsletter.analytics_code}}');
         </script>
     {% endif %}
+    {% if config.extra.newsletter.ackee_id %}
+      <script async src="https://cdn.jsdelivr.net/npm/ackee-tracker@3/dist/ackee-tracker.min.js" data-ackee-server="{{config.extra.newsletter.ackee_server}}" data-ackee-domain-id="{{config.extra.newsletter.ackee_id}}"></script>
+    {% endif %}
 
     <script src="/js/ajax.js"></script>
     <script src="/js/main.js"></script>
